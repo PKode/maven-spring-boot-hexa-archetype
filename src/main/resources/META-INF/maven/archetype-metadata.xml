@@ -1,0 +1,79 @@
+<archetype-descriptor name="maven-hexa-archetype">
+    <requiredProperties>
+        <requiredProperty key="language">
+            <defaultValue>kotlin</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="mainClass">
+            <defaultValue>
+                ${package.getClass().forName("org.apache.velocity.util.StringUtils").removeAndHump("$artifactId", "-")}App
+            </defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <modules>
+        <module id="${rootArtifactId}-domain" dir="__rootArtifactId__-domain" name="${rootArtifactId}-domain">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/__language__</directory>
+                </fileSet>
+                <fileSet>
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/test/__language__</directory>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-infra" dir="__rootArtifactId__-infra" name="${rootArtifactId}-infra">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/__language__</directory>
+                </fileSet>
+                <fileSet>
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/test/__language__</directory>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-application" dir="__rootArtifactId__-application"
+                name="${rootArtifactId}-application">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/__language__</directory>
+                </fileSet>
+                <fileSet>
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/test/__language__</directory>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-app" dir="__rootArtifactId__-app" name="${rootArtifactId}-app">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/__language__</directory>
+                </fileSet>
+                <fileSet>
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/test/__language__</directory>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>
