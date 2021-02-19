@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>fr.pk.test</groupId>
+    <artifactId>kotlin-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>kotlin-project</name>
+    <description>Parent pom of kotlin-project project</description>
+
+    <modules>
+        <module>kotlin-project-domain</module>
+        <module>kotlin-project-infra</module>
+        <module>kotlin-project-application</module>
+        <module>kotlin-project-app</module>
+    </modules>
+    <properties>
+        <java.version>11</java.version>
+        <kotlin.version>1.4.21</kotlin.version>
+        <domain.version>${project.version}</domain.version>
+        <infra.version>${project.version}</infra.version>
+        <application.version>${project.version}</application.version>
+    </properties>
+</project>
